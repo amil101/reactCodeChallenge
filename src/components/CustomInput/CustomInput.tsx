@@ -10,6 +10,7 @@ import Clear from '@material-ui/icons/Clear';
 import Check from '@material-ui/icons/Check';
 // core components
 import customInputStyle from '../../assets/jss/material-dashboard-react/components/customInputStyle';
+import { TextField } from '@material-ui/core';
 
 function CustomInput({ ...props }: any) {
   const {
@@ -44,23 +45,13 @@ function CustomInput({ ...props }: any) {
       className={formControlProps.className + ' ' + classes.formControl}
     >
       {labelText !== undefined ? (
-        <InputLabel
-          className={classes.labelRoot + labelClasses}
-          htmlFor={id}
-          {...labelProps}
-        >
-          {labelText}
-        </InputLabel>
+         <TextField
+         label={labelText}
+         id="outlined-size-normal"
+         variant="outlined"
+         {...inputProps}
+       />
       ) : null}
-      <Input
-        classes={{
-          root: marginTop,
-          disabled: classes.disabled,
-          underline: underlineClasses
-        }}
-        id={id}
-        {...inputProps}
-      />
       {error ? (
         <Clear className={classes.feedback + ' ' + classes.labelRootError} />
       ) : success ? (
