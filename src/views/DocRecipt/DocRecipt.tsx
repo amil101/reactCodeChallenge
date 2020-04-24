@@ -6,14 +6,14 @@ import CardHeader from '../../components/Card/CardHeader';
 import avatar from 'assets/img/faces/marc.jpg';
 import { createStyles, Checkbox, FormControlLabel, Divider, TextField } from '@material-ui/core';
 
-import Regulation from './componentes/Regulation';
-import HealthInsurance from './componentes/HealthInsurance';
-import RightPanelGeneral from './componentes/RightPanelGeneral';
-import Notes from './componentes/Notes';
-import Signature from './componentes/Signature';
+import Regulation from './components/Regulation';
+import HealthInsurance from './components/HealthInsurance';
+import RightPanelGeneral from './components/RightPanelGeneral';
+import Notes from './components/Notes';
+import Signature from './components/Signature';
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
-import SpanningTable from './componentes/Table/SpanningTable';
+import SpanningTable from './components/Table/SpanningTable';
 
 const styles = createStyles({
   cardCategoryWhite: {
@@ -34,7 +34,7 @@ const styles = createStyles({
   }
 });
 
-function UserProfile(props: any) {
+function DocRecipt(props: any) {
   const { classes } = props;
   return (
     <div>
@@ -81,4 +81,4 @@ function UserProfile(props: any) {
   );
 }
 
-export default withStyles(styles)(UserProfile);
+export default withStyles(styles)(DocRecipt);
